@@ -4,6 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import NavigationBar from "./components/NavigationBar";
 import Main from "./pages/Main";
+import Eileen from "./pages/Eileen";
+import Inga from "./pages/Inga";
+import Emin from "./pages/Emin";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +24,9 @@ export default function App() {
         tabBar={(props) => <NavigationBar {...props} />}
       >
         <Tab.Screen name="Main" component={Main} />
+        <Tab.Screen name="Eileen" component={Eileen} />
+        <Tab.Screen name="Inga" component={Inga} />
+        <Tab.Screen name="Emin" component={Emin} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,12 +1,13 @@
 import { Text, View, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Nav({ state, descriptors, navigation }) {
   return (
     <View style={{ flexDirection: "row" }}>
       {state.routes.map((route, index) => {
-        const buttons = ["Main", "Map", "Leaderboard"];
+        const buttons = ["Main", "Eileen", "Inga", "Emin"];
         const { options } = descriptors[route.key];
         const label =
           options.tabBarLabel !== undefined
@@ -58,15 +59,18 @@ export default function Nav({ state, descriptors, navigation }) {
               }}
             >
               {label === "Main" && (
-                <MaterialIcons name="space-dashboard" size={24} color="black" />
+                <MaterialIcons name="space-dashboard" size={24} color={isFocused ? "green" : "black"} />
               )}
-              {label === "Map" && (
-                <FontAwesome5 name="map-marker-alt" size={24} color="black" />
+              {label === "Eileen" && (
+                <MaterialCommunityIcons name="sigma-lower" size={24} color={isFocused ? "green" : "black"} />
               )}
-              {label === "Leaderboard" && (
-                <MaterialIcons name="leaderboard" size={24} color="black" />
+              {label === "Inga" && (
+                <MaterialCommunityIcons name="beta" size={24} color={isFocused ? "green" : "black"} />
               )}
-              <Text style={{ color: isFocused ? "black" : "#222" }}>
+              {label === "Emin" && (
+                <MaterialCommunityIcons name="gamma" size={24} color={isFocused ? "green" : "black"} />
+              )}
+              <Text style={{ color: isFocused ? "green" : "#222" }}>
                 {label}
               </Text>
             </View>
