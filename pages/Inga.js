@@ -1,9 +1,12 @@
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, Image} from "react-native";
 
 export default function Inga() {
     return(
         <SafeAreaView style={styles.container}>
-
+            <View style={styles.inner_container}>
+                <Text style={ {color: "green"} }>Testing text</Text>
+                <Image source={require('../assets/shrek.jpg')} />
+            </View>
         </SafeAreaView>
     );
 }
