@@ -6,7 +6,7 @@ import NavigationBar from "./components/NavigationBar";
 import Main from "./pages/Main";
 import Eileen from "./pages/Eileen";
 import Inga from "./pages/Inga";
-import Emin from "./pages/Emin";
+import Journal from "./pages/Journal";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export default function App() {
         <Tab.Screen name="Main" component={Main} />
         <Tab.Screen name="Eileen" component={Eileen} />
         <Tab.Screen name="Inga" component={Inga} />
-        <Tab.Screen name="Emin" component={Emin} />
+        <Tab.Screen name="Journal" component={Journal} />
       </Tab.Navigator>
     </NavigationContainer>
   );
